@@ -19,6 +19,7 @@
             --text-main: #f8fafc;
             --text-sub: #94a3b8;
             --badge-bg: linear-gradient(135deg, #ff8c00 0%, #ff5500 100%);
+            --pink-badge: linear-gradient(135deg, #ec4899 0%, #d946ef 100%);
         }
 
         * {
@@ -191,13 +192,13 @@
 
         /* Top product highlight style */
         .link-card.featured {
-            border: 1px solid rgba(255, 107, 0, 0.5);
-            background: linear-gradient(135deg, rgba(255, 107, 0, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border: 1px solid rgba(236, 72, 153, 0.6);
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
         }
 
         .link-card.featured:hover {
-            border-color: rgba(255, 107, 0, 0.8);
-            box-shadow: 0 12px 35px rgba(255, 107, 0, 0.25);
+            border-color: rgba(236, 72, 153, 0.9);
+            box-shadow: 0 12px 35px rgba(236, 72, 153, 0.3);
         }
 
         .link-content {
@@ -245,7 +246,7 @@
         }
 
         .badge {
-            background: var(--badge-bg);
+            background: var(--pink-badge);
             color: #ffffff;
             font-size: 0.7rem;
             font-weight: 800;
@@ -253,7 +254,7 @@
             border-radius: 20px;
             white-space: nowrap;
             letter-spacing: 0.5px;
-            box-shadow: 0 4px 12px rgba(255, 85, 0, 0.3);
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
         }
 
         .arrow-icon {
@@ -301,8 +302,22 @@
         </div>
 
         <div class="links-container">
-            <!-- Item 1: Capa de Carro (Destaque) -->
-            <a href="https://amzn.to/4zy9c3B" target="_blank" rel="noopener noreferrer" class="link-card featured">
+            <!-- Botão em Destaque: Clica e vai para a página de Skincare -->
+            <a href="skincare.html" class="link-card featured">
+                <div class="link-content">
+                    <span class="link-icon">🐾</span>
+                    <div class="link-text">
+                        <span class="link-title">Dog Paw Skincare Routine Kit</span>
+                        <span class="link-desc">Complete 3-step ASMR Paw Care Set</span>
+                    </div>
+                </div>
+                <div class="action-area">
+                    <span class="badge">3-PACK</span>
+                </div>
+            </a>
+
+            <!-- Item 2: Capa de Carro -->
+            <a href="https://amzn.to/4zy9c3B" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
                     <span class="link-icon">🚗</span>
                     <div class="link-text">
@@ -311,11 +326,11 @@
                     </div>
                 </div>
                 <div class="action-area">
-                    <span class="badge">DEAL</span>
+                    <span class="arrow-icon">➔</span>
                 </div>
             </a>
 
-            <!-- Item 2: Kit Brinquedos de Roer -->
+            <!-- Item 3: Kit Brinquedos de Roer -->
             <a href="https://amzn.to/4xaeYqv" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
                     <span class="link-icon">🦴</span>
@@ -329,7 +344,7 @@
                 </div>
             </a>
 
-            <!-- Item 3: Alimentador Automático -->
+            <!-- Item 4: Alimentador Automático -->
             <a href="https://amzn.to/4cTaD2K" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
                     <span class="link-icon">🐱</span>
@@ -343,7 +358,7 @@
                 </div>
             </a>
 
-            <!-- Item 4: Petisco Dental -->
+            <!-- Item 5: Petisco Dental -->
             <a href="https://amzn.to/4xRF15E" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
                     <span class="link-icon">🦷</span>
