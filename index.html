@@ -20,6 +20,7 @@
             --text-sub: #94a3b8;
             --badge-bg: linear-gradient(135deg, #ff8c00 0%, #ff5500 100%);
             --pink-badge: linear-gradient(135deg, #ec4899 0%, #d946ef 100%);
+            --new-badge: linear-gradient(135deg, #00d26a 0%, #059669 100%);
         }
 
         * {
@@ -190,7 +191,7 @@
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
         }
 
-        /* Top product highlight style */
+        /* Top skincare feature style */
         .link-card.featured {
             border: 1px solid rgba(236, 72, 153, 0.6);
             background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
@@ -199,6 +200,17 @@
         .link-card.featured:hover {
             border-color: rgba(236, 72, 153, 0.9);
             box-shadow: 0 12px 35px rgba(236, 72, 153, 0.3);
+        }
+
+        /* New product highlight style */
+        .link-card.new-deal {
+            border: 1px solid rgba(0, 210, 106, 0.6);
+            background: linear-gradient(135deg, rgba(0, 210, 106, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
+        }
+
+        .link-card.new-deal:hover {
+            border-color: rgba(0, 210, 106, 0.9);
+            box-shadow: 0 12px 35px rgba(0, 210, 106, 0.3);
         }
 
         .link-content {
@@ -245,7 +257,7 @@
             gap: 8px;
         }
 
-        .badge {
+        .badge-pink {
             background: var(--pink-badge);
             color: #ffffff;
             font-size: 0.7rem;
@@ -255,6 +267,18 @@
             white-space: nowrap;
             letter-spacing: 0.5px;
             box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+        }
+
+        .badge-new {
+            background: var(--new-badge);
+            color: #0f172a;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 6px 12px;
+            border-radius: 20px;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(0, 210, 106, 0.3);
         }
 
         .arrow-icon {
@@ -302,7 +326,7 @@
         </div>
 
         <div class="links-container">
-            <!-- Botão em Destaque: Clica e vai para a página de Skincare -->
+            <!-- 1. Skincare Kit (Mantido no topo com destaque rosa) -->
             <a href="skincare.html" class="link-card featured">
                 <div class="link-content">
                     <span class="link-icon">🐾</span>
@@ -312,11 +336,25 @@
                     </div>
                 </div>
                 <div class="action-area">
-                    <span class="badge">3-PACK</span>
+                    <span class="badge-pink">3-PACK</span>
                 </div>
             </a>
 
-            <!-- Item 2: Capa de Carro -->
+            <!-- 2. Árvore para Gatos / Cat Tree (Novo Lançamento com destaque verde NEW) -->
+            <a href="https://amzn.to/4gs4mwd" target="_blank" rel="noopener noreferrer" class="link-card new-deal">
+                <div class="link-content">
+                    <span class="link-icon">🌳</span>
+                    <div class="link-text">
+                        <span class="link-title">Hey-Brother Multi-Level Cat Tree</span>
+                        <span class="link-desc">Extra large condo with hammock & scratching posts</span>
+                    </div>
+                </div>
+                <div class="action-area">
+                    <span class="badge-new">NEW</span>
+                </div>
+            </a>
+
+            <!-- 3. Capa de Carro -->
             <a href="https://amzn.to/4zy9c3B" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
                     <span class="link-icon">🚗</span>
@@ -330,7 +368,7 @@
                 </div>
             </a>
 
-            <!-- Item 3: Kit Brinquedos de Roer -->
+            <!-- 4. Kit Brinquedos de Roer -->
             <a href="https://amzn.to/4xaeYqv" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
                     <span class="link-icon">🦴</span>
@@ -344,7 +382,7 @@
                 </div>
             </a>
 
-            <!-- Item 4: Alimentador Automático -->
+            <!-- 5. Alimentador Automático -->
             <a href="https://amzn.to/4cTaD2K" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
                     <span class="link-icon">🐱</span>
@@ -358,7 +396,7 @@
                 </div>
             </a>
 
-            <!-- Item 5: Petisco Dental -->
+            <!-- 6. Petisco Dental -->
             <a href="https://amzn.to/4xRF15E" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
                     <span class="link-icon">🦷</span>
@@ -380,3 +418,4 @@
 
 </body>
 </html>
+
