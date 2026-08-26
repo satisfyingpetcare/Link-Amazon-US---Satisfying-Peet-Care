@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satisfying Pet Care | Official Amazon Picks</title>
+    <title>Satisfying Pet Care | Curated Amazon Picks</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
-            --card-bg: rgba(255, 255, 255, 0.07);
-            --card-border: rgba(255, 255, 255, 0.12);
-            --card-hover-bg: rgba(255, 255, 255, 0.14);
-            --accent-orange: #ff6b00;
-            --accent-glow: rgba(255, 107, 0, 0.35);
-            --text-main: #f8fafc;
+            --bg-base: #090d16;
+            --bg-gradient: linear-gradient(135deg, #090d16 0%, #121829 100%);
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --card-hover-bg: rgba(255, 255, 255, 0.08);
+            --card-hover-border: rgba(255, 255, 255, 0.2);
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --text-main: #f1f5f9;
             --text-sub: #94a3b8;
-            --badge-bg: linear-gradient(135deg, #ff8c00 0%, #ff5500 100%);
-            --pink-badge: linear-gradient(135deg, #ec4899 0%, #d946ef 100%);
-            --new-badge: linear-gradient(135deg, #00d26a 0%, #059669 100%);
+            --badge-new: #10b981;
+            --badge-featured: #f43f5e;
         }
 
         * {
@@ -32,7 +32,7 @@
         }
 
         body {
-            background: #0f172a;
+            background: var(--bg-base);
             background-image: var(--bg-gradient);
             background-attachment: fixed;
             color: var(--text-main);
@@ -46,28 +46,28 @@
         .container {
             width: 100%;
             max-width: 440px;
-            background: rgba(15, 23, 42, 0.65);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 40px 24px 32px 24px;
-            border-radius: 32px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            padding: 44px 24px 32px 24px;
+            border-radius: 28px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        /* Decorative top glow */
+        /* Subtle top illumination */
         .container::before {
             content: '';
             position: absolute;
-            top: -100px;
+            top: -120px;
             left: 50%;
             transform: translateX(-50%);
-            width: 250px;
-            height: 250px;
-            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            width: 280px;
+            height: 280px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -75,47 +75,47 @@
         .profile-wrapper {
             position: relative;
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .profile-img {
-            width: 110px;
-            height: 110px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
         }
 
         .verified-badge {
             position: absolute;
-            bottom: 4px;
-            right: 4px;
-            background: #00d26a;
-            color: #0f172a;
-            width: 26px;
-            height: 26px;
+            bottom: 2px;
+            right: 2px;
+            background: #38bdf8;
+            color: #090d16;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 800;
-            border: 3px solid #0f172a;
+            border: 2px solid #090d16;
         }
 
         h1 {
-            font-size: 1.5rem;
-            font-weight: 800;
+            font-size: 1.35rem;
+            font-weight: 700;
             color: #ffffff;
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+            letter-spacing: -0.3px;
         }
 
         p.bio {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-sub);
-            margin-bottom: 32px;
+            margin-bottom: 28px;
             line-height: 1.5;
             font-weight: 400;
         }
@@ -124,113 +124,111 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin: 0 4px 16px 4px;
+            margin: 0 4px 14px 4px;
         }
 
         .section-title {
-            font-size: 0.78rem;
-            font-weight: 800;
+            font-size: 0.72rem;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            color: #ff9d5c;
+            color: var(--text-sub);
         }
 
         .live-tag {
-            font-size: 0.7rem;
-            font-weight: 700;
-            background: rgba(255, 107, 0, 0.15);
-            color: #ff8c00;
-            padding: 4px 10px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 107, 0, 0.3);
+            font-size: 0.68rem;
+            font-weight: 600;
+            background: rgba(16, 185, 129, 0.1);
+            color: #34d399;
+            padding: 3px 9px;
+            border-radius: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
             display: flex;
             align-items: center;
             gap: 6px;
         }
 
         .pulse-dot {
-            width: 6px;
-            height: 6px;
-            background-color: #ff5500;
+            width: 5px;
+            height: 5px;
+            background-color: #34d399;
             border-radius: 50%;
-            box-shadow: 0 0 8px #ff5500;
-            animation: pulse 1.5s infinite;
+            box-shadow: 0 0 6px #34d399;
+            animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0% { transform: scale(0.95); opacity: 0.8; }
-            50% { transform: scale(1.2); opacity: 1; }
-            100% { transform: scale(0.95); opacity: 0.8; }
+            0% { transform: scale(0.95); opacity: 0.7; }
+            50% { transform: scale(1.3); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.7; }
         }
 
         .links-container {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 12px;
         }
 
         .link-card {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 16px 18px;
+            padding: 14px 16px;
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 20px;
+            border-radius: 16px;
             text-decoration: none;
             color: var(--text-main);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.25s ease;
             position: relative;
             overflow: hidden;
         }
 
         .link-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-2px);
             background: var(--card-hover-bg);
-            border-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+            border-color: var(--card-hover-border);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Top skincare feature style */
         .link-card.featured {
-            border: 1px solid rgba(236, 72, 153, 0.6);
-            background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-color: rgba(244, 63, 94, 0.4);
+            background: linear-gradient(135deg, rgba(244, 63, 94, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
         }
 
-        .link-card.featured:hover {
-            border-color: rgba(236, 72, 153, 0.9);
-            box-shadow: 0 12px 35px rgba(236, 72, 153, 0.3);
-        }
-
-        /* New product highlight style */
         .link-card.new-deal {
-            border: 1px solid rgba(0, 210, 106, 0.6);
-            background: linear-gradient(135deg, rgba(0, 210, 106, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
-        }
-
-        .link-card.new-deal:hover {
-            border-color: rgba(0, 210, 106, 0.9);
-            box-shadow: 0 12px 35px rgba(0, 210, 106, 0.3);
+            border-color: rgba(16, 185, 129, 0.3);
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
         }
 
         .link-content {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
             text-align: left;
         }
 
         .link-icon {
-            font-size: 1.6rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 48px;
-            height: 48px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 14px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
             flex-shrink: 0;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: #cbd5e1;
+        }
+
+        .link-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
 
         .link-text {
@@ -239,68 +237,65 @@
         }
 
         .link-title {
-            font-weight: 700;
-            font-size: 0.96rem;
+            font-weight: 600;
+            font-size: 0.9rem;
             color: #ffffff;
             line-height: 1.3;
         }
 
         .link-desc {
-            font-size: 0.78rem;
+            font-size: 0.74rem;
             color: var(--text-sub);
-            margin-top: 4px;
+            margin-top: 2px;
         }
 
         .action-area {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
-        .badge-pink {
-            background: var(--pink-badge);
-            color: #ffffff;
-            font-size: 0.7rem;
-            font-weight: 800;
-            padding: 6px 12px;
-            border-radius: 20px;
-            white-space: nowrap;
+        .badge {
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 6px;
             letter-spacing: 0.5px;
-            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+            text-transform: uppercase;
         }
 
-        .badge-new {
-            background: var(--new-badge);
-            color: #0f172a;
-            font-size: 0.7rem;
-            font-weight: 800;
-            padding: 6px 12px;
-            border-radius: 20px;
-            white-space: nowrap;
-            letter-spacing: 0.5px;
-            box-shadow: 0 4px 12px rgba(0, 210, 106, 0.3);
+        .badge.pink {
+            background: rgba(244, 63, 94, 0.15);
+            color: #fb7185;
+            border: 1px solid rgba(244, 63, 94, 0.3);
+        }
+
+        .badge.green {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
         }
 
         .arrow-icon {
-            color: rgba(255, 255, 255, 0.4);
-            font-size: 1.1rem;
-            transition: transform 0.2s ease;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.9rem;
+            transition: transform 0.2s ease, color 0.2s ease;
         }
 
         .link-card:hover .arrow-icon {
-            transform: translateX(3px);
+            transform: translateX(2px);
             color: #ffffff;
         }
 
         footer {
-            margin-top: 36px;
-            font-size: 0.78rem;
+            margin-top: 30px;
+            font-size: 0.74rem;
             color: var(--text-sub);
             line-height: 1.5;
         }
 
         footer p span {
-            color: #ff6b00;
+            color: #38bdf8;
         }
     </style>
 </head>
@@ -313,68 +308,60 @@
             <div class="verified-badge">✓</div>
         </div>
 
-        <h1>Satisfying Pet Care 🐾✨</h1>
-        <p class="bio">Discover top-rated Amazon pet finds featured in our viral Shorts!</p>
+        <h1>Satisfying Pet Care</h1>
+        <p class="bio">Curated viral Amazon pet finds & essentials</p>
 
         <!-- Section Header -->
         <div class="section-header">
-            <span class="section-title">Trending Deals</span>
+            <span class="section-title">Featured Products</span>
             <div class="live-tag">
                 <span class="pulse-dot"></span>
-                AMAZON US
+                USA Store
             </div>
         </div>
 
         <div class="links-container">
-            <!-- 1. Skincare Kit (Destaque principal) -->
-            <a href="skincare.html" class="link-card featured">
-                <div class="link-content">
-                    <span class="link-icon">🐾</span>
-                    <div class="link-text">
-                        <span class="link-title">Dog Paw Skincare Routine Kit</span>
-                        <span class="link-desc">Complete 3-step ASMR Paw Care Set</span>
-                    </div>
-                </div>
-                <div class="action-area">
-                    <span class="badge-pink">3-PACK</span>
-                </div>
-            </a>
-
-            <!-- 2. Bolsa para Cães (Novo Lançamento / NEW) -->
+            <!-- 1. Bolsa para Cães -->
             <a href="https://amzn.to/4gurie5" target="_blank" rel="noopener noreferrer" class="link-card new-deal">
                 <div class="link-content">
-                    <span class="link-icon">👜</span>
+                    <span class="link-icon">
+                        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+                    </span>
                     <div class="link-text">
-                        <span class="link-title">Comfortable Pet Travel Carrier Bag</span>
-                        <span class="link-desc">Breathable & airline-approved portable pet bag</span>
+                        <span class="link-title">Pet Travel Carrier Bag</span>
+                        <span class="link-desc">Breathable & airline-approved portable bag</span>
                     </div>
                 </div>
                 <div class="action-area">
-                    <span class="badge-new">NEW</span>
+                    <span class="badge green">NEW</span>
                 </div>
             </a>
 
-            <!-- 3. Caixa de Areia de Aço Inoxidável -->
-            <a href="https://amzn.to/45QH3XX" target="_blank" rel="noopener noreferrer" class="link-card">
+            <!-- 2. Caixa de Areia de Aço Inoxidável -->
+            <a href="https://amzn.to/45QH3XX" target="_blank" rel="noopener noreferrer" class="link-card new-deal">
                 <div class="link-content">
-                    <span class="link-icon">🛡️</span>
+                    <span class="link-icon">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01"/></svg>
+                    </span>
                     <div class="link-text">
-                        <span class="link-title">Stainless Steel XL Cat Litter Box</span>
-                        <span class="link-desc">Anti-splash high walls, odor-free & non-stick</span>
+                        <span class="link-title">Stainless Steel XL Litter Box</span>
+                        <span class="link-desc">Anti-splash high walls, odor-free</span>
                     </div>
                 </div>
                 <div class="action-area">
-                    <span class="arrow-icon">➔</span>
+                    <span class="badge green">NEW</span>
                 </div>
             </a>
 
-            <!-- 4. Escova de Auto-Limpeza -->
+            <!-- 3. Escova de Auto-Limpeza -->
             <a href="https://amzn.to/4xnb120" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
-                    <span class="link-icon">🧹</span>
+                    <span class="link-icon">
+                        <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </span>
                     <div class="link-text">
                         <span class="link-title">1-Click Self-Cleaning Pet Brush</span>
-                        <span class="link-desc">Gentle rubber-tipped massaging slicker brush</span>
+                        <span class="link-desc">Gentle rubber-tipped massaging brush</span>
                     </div>
                 </div>
                 <div class="action-area">
@@ -382,10 +369,12 @@
                 </div>
             </a>
 
-            <!-- 5. Areia Inteligente -->
+            <!-- 4. Areia Inteligente -->
             <a href="https://amzn.to/4qzLgsw" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
-                    <span class="link-icon">✨</span>
+                    <span class="link-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </span>
                     <div class="link-text">
                         <span class="link-title">Smart Health-Monitoring Crystal Litter</span>
                         <span class="link-desc">Color-changing silica gel with odor control</span>
@@ -396,10 +385,28 @@
                 </div>
             </a>
 
+            <!-- 5. Kit Skincare (Featured) -->
+            <a href="skincare.html" class="link-card featured">
+                <div class="link-content">
+                    <span class="link-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </span>
+                    <div class="link-text">
+                        <span class="link-title">Dog Paw Skincare Routine Kit</span>
+                        <span class="link-desc">Complete 3-step ASMR Paw Care Set</span>
+                    </div>
+                </div>
+                <div class="action-area">
+                    <span class="badge pink">POPULAR</span>
+                </div>
+            </a>
+
             <!-- 6. Caminha Caverna -->
             <a href="https://amzn.to/4xWQwsD" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
-                    <span class="link-icon">🛏️</span>
+                    <span class="link-icon">
+                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </span>
                     <div class="link-text">
                         <span class="link-title">Calming Burrow Cave Dog Bed</span>
                         <span class="link-desc">Cozy self-warming plush bed for pets</span>
@@ -413,7 +420,9 @@
             <!-- 7. Árvore para Gatos -->
             <a href="https://amzn.to/4gs4mwd" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
-                    <span class="link-icon">🌳</span>
+                    <span class="link-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </span>
                     <div class="link-text">
                         <span class="link-title">Hey-Brother Multi-Level Cat Tree</span>
                         <span class="link-desc">Extra large condo with hammock & posts</span>
@@ -424,24 +433,28 @@
                 </div>
             </a>
 
-            <!-- 8. Capa de Carro -->
-            <a href="https://amzn.to/4zy9c3B" target="_blank" rel="noopener noreferrer" class="link-card">
+            <!-- 8. Capa de Carro (Com Popular) -->
+            <a href="https://amzn.to/4zy9c3B" target="_blank" rel="noopener noreferrer" class="link-card featured">
                 <div class="link-content">
-                    <span class="link-icon">🚗</span>
+                    <span class="link-icon">
+                        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="22" height="18" rx="2" ry="2"/><line x1="1" y1="9" x2="23" y2="9"/></svg>
+                    </span>
                     <div class="link-text">
                         <span class="link-title">Waterproof Dog Car Seat Cover</span>
                         <span class="link-desc">Heavy-duty back seat hammock & protector</span>
                     </div>
                 </div>
                 <div class="action-area">
-                    <span class="arrow-icon">➔</span>
+                    <span class="badge pink">POPULAR</span>
                 </div>
             </a>
 
             <!-- 9. Kit Brinquedos de Roer -->
             <a href="https://amzn.to/4xaeYqv" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
-                    <span class="link-icon">🦴</span>
+                    <span class="link-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+                    </span>
                     <div class="link-text">
                         <span class="link-title">4-Pack Tough Dog Chew Toys</span>
                         <span class="link-desc">Indestructible flavor bones for chewers</span>
@@ -455,7 +468,9 @@
             <!-- 10. Alimentador Automático -->
             <a href="https://amzn.to/4cTaD2K" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
-                    <span class="link-icon">🐱</span>
+                    <span class="link-icon">
+                        <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                    </span>
                     <div class="link-text">
                         <span class="link-title">Automatic Cat Food & Water Feeder</span>
                         <span class="link-desc">Gravity dispenser for worry-free trips</span>
@@ -469,7 +484,9 @@
             <!-- 11. Petisco Dental -->
             <a href="https://amzn.to/4xRF15E" target="_blank" rel="noopener noreferrer" class="link-card">
                 <div class="link-content">
-                    <span class="link-icon">🦷</span>
+                    <span class="link-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 7.5 16.6l-2.2 2.2a2 2 0 0 1-2.8 0L12 18.4l-2.5 2.4a2 2 0 0 1-2.8 0l-2.2-2.2A10 10 0 0 1 12 2z"/></svg>
+                    </span>
                     <div class="link-text">
                         <span class="link-title">Dental Fresh Breath Bites</span>
                         <span class="link-desc">Daily oral care soft chews for dogs</span>
